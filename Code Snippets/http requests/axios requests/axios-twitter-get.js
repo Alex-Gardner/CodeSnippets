@@ -4,9 +4,9 @@
 // access_token:"AAAAAAAAAAAAAAAAAAAAAFdYzwAAAAAAQU8arQXgJyQ%2FZVBqTP
 //g%2BZSNGrNU%3DZQYnnjLEtWFAFiPb4Ux9FsfmfNYL4rICH2EmWU7GDCaHB5GQ4H"
 var axios = require('axios');
+import token from './token.js'
 
-var bearer_token =
-  'AAAAAAAAAAAAAAAAAAAAAFdYzwAAAAAAQU8arQXgJyQ%2FZVBqTPg%2BZSNGrNU%3DZQYnnjLEtWFAFiPb4Ux9FsfmfNYL4rICH2EmWU7GDCaHB5GQ4H';
+var bearer_token = token;
 
 var get_auth = {
   headers: {
