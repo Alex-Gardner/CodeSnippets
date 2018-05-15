@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href='newgrid.css'>
+    </head>
+
+    <body>
+
+      <div class='box box1'>
+          <div>Here</div>
+          <div>we</div>
+          <div>have</div>
+          <div>the</div>
+          <div>start</div>
+          <div>of</div>
+          <div>a</div>
+          <div>grid</div>
+          <div>layout</div>
+          <div>(hopefully).</div>
+          <div></div>
+          <div></div>
+      </div>
+
+      <div class='box box2'>
+          <div>This</div>
+          <div>grid</div>
+          <div>is</div>
+          <div>for</div>
+          <div>displaying</div>
+          <div>'fr' (fractional)</div>
+          <div>values</div>
+          <div></div>
+          <div></div>
+      </div>
+
+      <div class='box box3'>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+          <div>11</div>
+          <div>12</div>
+      </div>
+
+      <div class='box box4'>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class='horiz vert'>Make This Large</div>
+          <div></div>
+          <div></div>
+          <div class='horiz'>Stretch This Across</div>
+          <div class='moved'>Moved And Stretched To Fill All Rows</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class='vert'>Stretch This Vertically</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+
+      <div>
+          <h3>Original (justify-items: stretch)</h3>
+          <div class='orig'>
+              <div>Box 1</div>
+              <div>Box 2</div>
+              <div>Box 3</div>
+              <div>Box 4</div>
+              <div>Box 5</div>
+              <div>Box 6</div>
+              <div>Box 7</div>
+              <div>Box 8</div>
+          </div>
+      </div>
+
+      <div>
+          <h3>Justify</h3>
+          <div class='orig just'>
+              <div>Box 1</div>
+              <div>Box 2</div>
+              <div>Box 3</div>
+              <div>Box 4</div>
+              <div>Box 5</div>
+              <div>Box 6</div>
+              <div>Box 7</div>
+              <div>Box 8</div>
+          </div>
+      </div>
+
+      <div>
+          <h3>Align</h3>
+          <div class='orig align'>
+              <div>Box 1</div>
+              <div>Box 2</div>
+              <div>Box 3</div>
+              <div>Box 4</div>
+              <div>Box 5</div>
+              <div>Box 6</div>
+              <div>Box 7</div>
+              <div>Box 8</div>
+          </div>
+      </div>
+
+      <div>
+          <h3>Self-Align/Justify</h3>
+          <div class='orig self'>
+              <div>Box 1</div>
+              <div>Box 2 - Justified Center</div>
+              <div>Box 3 - <br>Aligned End</div>
+              <div>Box 4</div>
+              <div>Box 5</div>
+              <div>Box 6</div>
+              <div>Box 7</div>
+              <div>Box 8</div>
+          </div>
+      </div>
+
+        <div class='grid'>
+            <header>Header</header>
+            <nav>Nav</nav>
+            <aside class='side1'>Sidebar</aside>
+            <article>Content
+                <p>Main content would go here</p>
+            </article>
+            <aside class='side2'>Author Info</aside>
+            <footer>Footer</footer>
+        </div>
+
+        <div>
+            <x-gif src="http://i.imgur.com/m25uYzq.gif"></x-gif>
+        </div>
+
+   </body>
+
+
+</html>

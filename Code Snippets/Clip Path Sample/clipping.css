@@ -1,0 +1,11 @@
+img {
+    width: 360px;
+    height: 260px;
+    padding: 5px;
+}
+
+#clipped {
+  margin-bottom: 20px;
+  clip-path: url(#cross);
+}
+

@@ -1,0 +1,215 @@
+.box1{
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px; /* creates 4 columns of 120px each */
+    grid-auto-rows: 90px;
+    grid-gap: 10px 15px; /* first number represetnts the gap between rows, second represents the gap between columns 
+                            grid-column-gap and grid-row-gap are separate instances of this property to target each gap in particular */
+}
+
+.box div {
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box {
+    border-bottom: solid;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+}
+
+.box1 div:nth-of-type(odd){
+    border: 2px solid green;
+    background-color: lightgreen;
+}
+
+.box1 div:nth-of-type(even){
+    border: 2px solid blue;
+    background-color: lightblue;
+}
+
+/*-------------------------------------------------------*/
+.box2{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr 200px); /* fr units scale with window size-readjusting the box legth in proportion. The repeat option takes 2 properties: how many times to repeat the pattern (2) and the pattern that                                                 should be repeated (2fr column then 200px column) - **can be combined with absolute pixel size*/
+    grid-auto-rows: minmax(80px, auto); /* minmax() sets the minimum value of a grid object and its maximum */
+    grid-gap: 5px;
+}
+
+
+
+.box2 div:nth-of-type(odd){
+    border: 2px solid blue;
+    background-color: lightblue;
+}
+
+.box2 div:nth-of-type(even){
+    border: 2px solid purple;
+    background-color: lavender;
+}
+/* -------------------------------------------------------*/
+.box3 {
+    display: grid;
+    grid-template-columns: repeat(1, 50px 2fr 1fr 30px);
+    grid-gap: 15px;
+    grid-auto-flow: column;  /* This line changes the way grid fills in. Instead of moving from left to right, this causes grid to fill in from top to bottom. */
+    grid-template-rows: 50px 50px 50px; /* 3 Rows are enforced here, else everything would fill into a single row of 12 columns */ 
+}
+.box3 div {
+    order: 2;
+}
+
+.box3 div:nth-of-type(odd){
+    border: 2px solid maroon;
+    background-color: salmon;
+}
+
+.box3 div:nth-of-type(even){
+    border: 2px solid turquoise;
+    background-color: paleturquoise;
+}
+
+/* This section (in conjunction with line 57 above) pushes the 8th box to the front of the order fill queue */
+.box3 div:nth-child(8) {
+    order: 1;
+}
+/* ------------------------------------------------------*/
+.box4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 2fr 1fr 1fr);
+    grid-template-rows: 50px 30px 20px 60px 50px 35px;
+    grid-gap: 5px;
+    grid-auto-flow: dense; /* causes grid items to igore DOM order (in a limited way) and fill into empty positions */
+    
+}
+.box4 div:nth-of-type(5n+1){
+    border: 2px solid darkgreen;
+    background-color: lightblue;
+}
+.box4 div:nth-of-type(5n+2) {
+    border: 2px solid blue;
+    background-color: lightgreen;
+}
+.box4 div:nth-of-type(5n+3) {
+    border: 2px solid maroon;
+    background-color: lavender;
+}
+.box4 div:nth-of-type(5n+4) {
+    border: 2px solid navy;
+    background-color: lightsalmon;
+}
+.box4 div:nth-of-type(5n+5){
+    border: 2px solid darkorange;
+    background-color: lightcyan;
+}
+.horiz {
+    grid-column-end: span 3;
+}
+.vert {
+    grid-row-end: span 3;
+}
+.moved{
+    grid-column: 3;
+    grid-row: 1 / -1;
+}
+
+
+.orig {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 1fr);
+    grid-template-rows: 100px 100px 100px 100px auto;
+    grid-gap: 10px;
+    border-bottom: solid 5px;
+}
+
+.orig div {
+    background-color: #3B7A57;
+    border-radius: 5px;
+}
+
+.orig div:nth-of-type(even) {
+    background-color: #89CFF0;
+}
+
+.orig div:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.orig div:nth-child(2) {
+    grid-row: 1 / 3;
+}
+
+.orig div:nth-child(7) {
+    grid-column: -1 /1;
+}
+
+/* -------------------------------------------------- */
+
+.just {
+    justify-items: center; /* justify-items can take the values: stretch (default), start, center, end */    
+}
+
+/* -------------------------------------------------- */
+
+.align {
+    align-items: end; /* align-items can take the same values: stretch (default), start, center, end */ 
+}
+
+/* -------------------------------------------------- */
+.self div:nth-child(3) {
+    align-self: end;
+}
+
+.self div:nth-child(2) {
+    justify-self: center;
+}
+
+
+
+
+
+.grid * {   /* Selects all child containers to the .grid div*/
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.grid :nth-child(2n+1) {  /* Selects odd numbered children to the .grid container */
+    background-color: #36454f;
+}
+
+.grid :nth-child(2n+2) { /* (Note to self only) I **hope** you can figure this one out */
+    background-color: #446ccf;
+}
+
+header {
+  grid-area: hd;
+}
+nav {
+  grid-area: nav;
+}
+.side1 {
+  grid-area: sd1;
+}
+article {
+  grid-area: main;
+}
+.side2 {
+  grid-area: sd2;
+}
+footer {
+  grid-area: ft;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr 2fr;       /* !*!*! Tricky - Note: 3 Columns defined in template area -> Three grid-area aliases need to be used in each line.*/
+    grid-template-areas:
+      "hd  hd hd"
+      "nav .. .."
+      "sd1 main main"
+      "sd1 sd2  sd2"
+      "ft  ft   ft";
+}
+
+

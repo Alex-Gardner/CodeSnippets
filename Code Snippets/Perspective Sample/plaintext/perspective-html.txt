@@ -1,0 +1,29 @@
+
+<!-- Perspective controls 3d transforms in CSS. As perspective decreases, the larger the effect on your subsequent transforms. 
+	In this example, perspective is being used in conjunction with rotateY around a fixed point (center left of the picture element...~ish) to create the doorway effect.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel='stylesheet' href='style.css'>
+	</head>
+	<body>
+		<div class='holder'>
+  			<div class='green first'>
+		   		<img class='pic' src='http://i.imgur.com/U3wCXjn.jpg'>
+		  </div>
+		  <div class='green second'>
+		    	<img class='pic' src='http://i.imgur.com/U3wCXjn.jpg'>
+		  </div>
+		  <div class='green third'>
+		    	<img class='pic' src='http://i.imgur.com/U3wCXjn.jpg'>
+		  </div>
+		  <div class='green fourth'>
+		    	<img class='pic' src='http://i.imgur.com/U3wCXjn.jpg'>
+		  </div>  
+		</div> 
+	</body>
+</html>

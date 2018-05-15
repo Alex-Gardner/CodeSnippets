@@ -1,0 +1,44 @@
+<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path 
+so far clip path seems to be working on Chrome but not fully implemented on Firefox (01/23/17)
+
+This example has 3 files: the HTML for the element and selectors, CSS to use clip path, and the selector activation code in JS.
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='clipping.css'>
+    </head>
+    <body>
+    
+
+<!-- the HTML for a cross SVG -->
+
+        <svg height="0" width="0">
+            <defs>
+                <clipPath id="cross">
+                <rect y="110" x="137" width="90" height="90"/>
+                <rect x="0" y="110" width="90" height="90"/>
+                <rect x="137" y="0" width="90" height="90"/>
+                <rect x="0" y="0" width="90" height="90"/>
+             </clipPath>
+        </defs>
+        </svg>
+            
+            <img id='clipped' src='https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-3362.jpg'>
+        
+
+
+<!-- 
+Selector For Clip path (None, cross, circle, inset) 
+-->
+
+            <select id="clipPath">
+                <option value="none">none</option>
+                <option value="circle(150px at 180px 130px)">circle</option>
+                <option value="url(#cross)" selected>cross</option>
+                <option value="inset(20px round 20px)">inset</option>
+            </select>
+    <script src='app.js'></script>
+    </body>
+</html>

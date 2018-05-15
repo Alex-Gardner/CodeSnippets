@@ -1,0 +1,25 @@
+.pic {
+  border: solid;
+  width: 150px;
+  height: 150px;
+}
+.green {
+  transform: rotateX(0deg);
+  padding: 5px;  
+  transform-origin: center left;
+}
+.first, .third{  
+  transform: rotateY(5deg);
+}
+.second, .fourth {
+  transform-origin: center right;
+  transform: rotateY(-5deg);
+}
+.holder {
+  perspective: 100px;
+  border: solid;
+  width: 335px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+}

@@ -1,0 +1,45 @@
+.grid * {   /* Selects all child containers to the .grid div*/
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.grid :nth-child(2n+1) {  /* Selects odd numbered children to the .grid container */
+    background-color: #36454f;
+}
+
+.grid :nth-child(2n+2) { /* (Note to self only) I **hope** you can figure this one out */
+    background-color: #446ccf;
+}
+
+header {
+  grid-area: hd;
+}
+nav {
+  grid-area: nav;
+}
+.side1 {
+  grid-area: sd1;
+}
+article {
+  grid-area: main;
+}
+.side2 {
+  grid-area: sd2;
+}
+footer {
+  grid-area: ft;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr 2fr;       /* !*!*! Tricky - Note: 3 Columns defined in template area -> Three grid-area aliases need to be used in each line.*/
+    grid-template-areas:
+      "hd  hd hd"
+      "nav .. .."
+      "sd1 main main"
+      "sd1 sd2  sd2"
+      "ft  ft   ft";
+}
+
+
